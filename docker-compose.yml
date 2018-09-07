@@ -5,8 +5,8 @@ services:
     volumes:
       - ./redirect.conf:/etc/nginx/conf.d/default.conf
     environment:
-      VIRTUAL_HOST: "mijn-binnenland.vlaanderen.be"
-      LETSENCRYPT_HOST: "mijn-binnenland.vlaanderen.be"
+      VIRTUAL_HOST: "mijn-binnenland.vlaanderen.be,mandatenbeheer.vlaanderen.be,mandatenbeheer-publicatie.vlaanderen.be"
+      LETSENCRYPT_HOST: "mijn-binnenland.vlaanderen.be,mandatenbeheer.vlaanderen.be,mandatenbeheer-publicatie.vlaanderen.be"
       LETSENCRYPT_EMAIL: "erika.pauwels@redpencil.io"
     networks:
       - proxy
