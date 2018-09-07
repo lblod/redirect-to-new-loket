@@ -1,0 +1,14 @@
+version: "3"
+services:
+  redirect:
+    image: nginx:1.15.3
+    volumes:
+      - ./redirect.conf:/etc/nginx/conf.d/default.conf
+    environment:
+      VIRTUAL_HOST: "mijn-binnenland.vlaanderen.be"
+      LETSENCRYPT_HOST: "mijn-binnenland.vlaanderen.be"
+      LETSENCRYPT_EMAIL: "erika.pauwels@redpencil.io"
+networks:
+  proxy:
+    external:
+      name: letsencrypt_default
