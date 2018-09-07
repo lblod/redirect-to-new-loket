@@ -8,6 +8,9 @@ services:
       VIRTUAL_HOST: "mijn-binnenland.vlaanderen.be"
       LETSENCRYPT_HOST: "mijn-binnenland.vlaanderen.be"
       LETSENCRYPT_EMAIL: "erika.pauwels@redpencil.io"
+    networks:
+      - proxy
+      - default      
 networks:
   proxy:
     external:
